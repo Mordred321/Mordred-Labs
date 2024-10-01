@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2ns653cr11qd"]
+
+[ext_resource type="Texture2D" uid="uid://dd10ikbes6e1s" path="res://character.png" id="1_ujxxm"]
+[ext_resource type="Texture2D" uid="uid://1h2ma6tdqoml" path="res://lamp.png" id="2_241vg"]
+[ext_resource type="Texture2D" uid="uid://s7hwcrjy27bd" path="res://cat.png" id="2_duhej"]
+[ext_resource type="Texture2D" uid="uid://bc3tpy636h5hq" path="res://butterfly.png" id="3_pquwp"]
+[ext_resource type="Texture2D" uid="uid://dj0xg44qevwdd" path="res://carpet.png" id="4_j4jt3"]
+
+[node name="main" type="Node2D"]
+
+[node name="pillar3" type="ColorRect" parent="."]
+offset_left = 232.0
+offset_top = -281.0
+offset_right = 272.0
+offset_bottom = -241.0
+scale = Vector2(3.5, 14)
+color = Color(0.74, 0.717307, 0.5698, 1)
+
+[node name="ColorRect" type="ColorRect" parent="pillar3"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 40.0
+offset_right = 30.0
+offset_bottom = 80.0
+scale = Vector2(1.5, 0.15)
+
+[node name="pillar4" type="ColorRect" parent="."]
+offset_left = 940.0
+offset_top = -281.0
+offset_right = 980.0
+offset_bottom = -241.0
+scale = Vector2(3.5, 14)
+color = Color(0.74, 0.717307, 0.5698, 1)
+
+[node name="ColorRect" type="ColorRect" parent="pillar4"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 40.0
+offset_right = 30.0
+offset_bottom = 80.0
+scale = Vector2(1.5, 0.15)
+
+[node name="Carpet" type="Sprite2D" parent="."]
+position = Vector2(575, 290)
+scale = Vector2(0.484348, 0.484348)
+texture = ExtResource("4_j4jt3")
+
+[node name="pillar" type="ColorRect" parent="."]
+offset_left = 38.0
+offset_right = 78.0
+offset_bottom = 40.0
+scale = Vector2(3.5, 14)
+color = Color(0.74, 0.717307, 0.5698, 1)
+
+[node name="ColorRect" type="ColorRect" parent="pillar"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 40.0
+offset_right = 30.0
+offset_bottom = 80.0
+scale = Vector2(1.5, 0.15)
+
+[node name="pillar2" type="ColorRect" parent="."]
+offset_left = 750.0
+offset_right = 790.0
+offset_bottom = 40.0
+scale = Vector2(3.5, 14)
+color = Color(0.74, 0.717307, 0.5698, 1)
+
+[node name="ColorRect" type="ColorRect" parent="pillar2"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 40.0
+offset_right = 30.0
+offset_bottom = 80.0
+scale = Vector2(1.5, 0.15)
+
+[node name="Lamp" type="Sprite2D" parent="."]
+position = Vector2(111, 135)
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("2_241vg")
+
+[node name="Lamp2" type="Sprite2D" parent="."]
+position = Vector2(821, 135)
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("2_241vg")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(516, 295)
+rotation = 6.28319
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("1_ujxxm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Icon"]
+position = Vector2(5, -8.00003)
+texture = ExtResource("2_duhej")
+
+[node name="Sprite2D" type="Sprite2D" parent="Icon/Sprite2D"]
+position = Vector2(85, 28)
+texture = ExtResource("3_pquwp")
