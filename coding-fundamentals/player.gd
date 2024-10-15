@@ -2,6 +2,8 @@ extends Sprite2D
 
 var x = 1
 
+var speed = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#print("Hello everybody!")
@@ -18,13 +20,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#var y = 100
-	#print(x)
-	#print(y)
-	#y= y+10
-	#x = x+1
-	position.x = position.x +1
-	position.y += 2
+
+	position.x = position.x + speed
+	position.y += speed
 	
 	
 	pass
