@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnods0amdh4x4"]
+
+[ext_resource type="Texture2D" uid="uid://1h2ma6tdqoml" path="res://lamp.png" id="1_gstxr"]
+
+[node name="pillar" type="ColorRect"]
+offset_left = 38.0
+offset_right = 78.0
+offset_bottom = 40.0
+scale = Vector2(3.5, 14)
+color = Color(0.74, 0.717307, 0.5698, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 40.0
+offset_right = 30.0
+offset_bottom = 80.0
+scale = Vector2(1.5, 0.15)
+
+[node name="Lamp" type="Sprite2D" parent="."]
+position = Vector2(20.8571, 9.64286)
+scale = Vector2(0.0542857, 0.0135714)
+texture = ExtResource("1_gstxr")

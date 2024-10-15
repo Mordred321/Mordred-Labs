@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b2ns653cr11qd"]
 
 [ext_resource type="Texture2D" uid="uid://dd10ikbes6e1s" path="res://character.png" id="1_ujxxm"]
-[ext_resource type="Texture2D" uid="uid://1h2ma6tdqoml" path="res://lamp.png" id="2_241vg"]
 [ext_resource type="Texture2D" uid="uid://s7hwcrjy27bd" path="res://cat.png" id="2_duhej"]
+[ext_resource type="PackedScene" uid="uid://dnods0amdh4x4" path="res://pillar scene.tscn" id="2_h08k3"]
 [ext_resource type="Texture2D" uid="uid://bc3tpy636h5hq" path="res://butterfly.png" id="3_pquwp"]
 [ext_resource type="Texture2D" uid="uid://dj0xg44qevwdd" path="res://carpet.png" id="4_j4jt3"]
 
@@ -45,45 +45,11 @@ position = Vector2(575, 290)
 scale = Vector2(0.484348, 0.484348)
 texture = ExtResource("4_j4jt3")
 
-[node name="pillar" type="ColorRect" parent="."]
-offset_left = 38.0
-offset_right = 78.0
-offset_bottom = 40.0
-scale = Vector2(3.5, 14)
-color = Color(0.74, 0.717307, 0.5698, 1)
+[node name="pillar" parent="." instance=ExtResource("2_h08k3")]
 
-[node name="ColorRect" type="ColorRect" parent="pillar"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 40.0
-offset_right = 30.0
-offset_bottom = 80.0
-scale = Vector2(1.5, 0.15)
-
-[node name="pillar2" type="ColorRect" parent="."]
-offset_left = 750.0
-offset_right = 790.0
-offset_bottom = 40.0
-scale = Vector2(3.5, 14)
-color = Color(0.74, 0.717307, 0.5698, 1)
-
-[node name="ColorRect" type="ColorRect" parent="pillar2"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 40.0
-offset_right = 30.0
-offset_bottom = 80.0
-scale = Vector2(1.5, 0.15)
-
-[node name="Lamp" type="Sprite2D" parent="."]
-position = Vector2(111, 135)
-scale = Vector2(0.19, 0.19)
-texture = ExtResource("2_241vg")
-
-[node name="Lamp2" type="Sprite2D" parent="."]
-position = Vector2(821, 135)
-scale = Vector2(0.19, 0.19)
-texture = ExtResource("2_241vg")
+[node name="pillar5" parent="." instance=ExtResource("2_h08k3")]
+offset_left = 744.0
+offset_right = 784.0
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(516, 295)

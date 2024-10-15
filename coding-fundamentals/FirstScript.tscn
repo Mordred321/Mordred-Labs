@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmshb37uki40o"]
+
+[ext_resource type="Texture2D" uid="uid://b58n62wxrk2hb" path="res://icon.svg" id="1_w8d5j"]
+[ext_resource type="Script" path="res://player.gd" id="2_tdbon"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="3_mafu4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(519, 118)
+texture = ExtResource("1_w8d5j")
+script = ExtResource("2_tdbon")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+script = ExtResource("3_mafu4")
