@@ -10,6 +10,7 @@
 position = Vector2(519, 118)
 texture = ExtResource("1_w8d5j")
 script = ExtResource("2_tdbon")
+speed = 2.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
