@@ -13,5 +13,5 @@ script = ExtResource("2_tdbon")
 speed = 2.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(578, 324)
 script = ExtResource("3_mafu4")
