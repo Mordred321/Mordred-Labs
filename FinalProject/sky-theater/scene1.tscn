@@ -1,8 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://ik6bu4x7pn8v"]
+[gd_scene load_steps=17 format=3 uid="uid://ik6bu4x7pn8v"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_7tbyk"]
+[ext_resource type="Texture2D" uid="uid://cd133w8bs28yo" path="res://scene/corridor.png" id="1_ujayv"]
 [ext_resource type="Texture2D" uid="uid://dt30j8b01d8qm" path="res://character/stand.png" id="2_tmawl"]
 [ext_resource type="Texture2D" uid="uid://br5l8jmijs71i" path="res://character/run_small.png" id="3_mxsr2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwspi"]
+size = Vector2(1159, 83.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6dfs"]
 radius = 36.0
@@ -84,10 +88,22 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwspi"]
-size = Vector2(712, 102)
-
 [node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Corridor" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1, -1)
+scale = Vector2(0.601562, 0.601563)
+texture = ExtResource("1_ujayv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, 279.75)
+shape = SubResource("RectangleShape2D_uwspi")
+
+[node name="Camera2D" type="Camera2D" parent="StaticBody2D"]
+position = Vector2(0.999998, -1.99999)
+scale = Vector2(0.219536, 0.219536)
 
 [node name="you" type="CharacterBody2D" parent="."]
 script = ExtResource("1_7tbyk")
@@ -100,19 +116,3 @@ position = Vector2(0, 1)
 scale = Vector2(0.127901, 0.127901)
 sprite_frames = SubResource("SpriteFrames_nymnf")
 animation = &"run"
-
-[node name="Camera2D" type="Camera2D" parent="you"]
-position = Vector2(0.999998, -1.99999)
-scale = Vector2(0.219536, 0.219536)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
-offset_left = -354.0
-offset_top = 73.0
-offset_right = 356.0
-offset_bottom = 175.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, 124)
-shape = SubResource("RectangleShape2D_uwspi")
