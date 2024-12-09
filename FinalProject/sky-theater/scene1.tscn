@@ -1,10 +1,11 @@
-[gd_scene load_steps=37 format=3 uid="uid://ik6bu4x7pn8v"]
+[gd_scene load_steps=39 format=3 uid="uid://ik6bu4x7pn8v"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_7tbyk"]
-[ext_resource type="Texture2D" uid="uid://cd133w8bs28yo" path="res://scene/corridor.png" id="1_ujayv"]
+[ext_resource type="Texture2D" uid="uid://bpw5s7f3avxes" path="res://scene/corridor2.png" id="1_8o6ar"]
 [ext_resource type="Texture2D" uid="uid://br5l8jmijs71i" path="res://character/run_small.png" id="3_mxsr2"]
 [ext_resource type="Texture2D" uid="uid://d3gw4dxq81bw3" path="res://character/stand2.png" id="3_ycmnp"]
 [ext_resource type="Texture2D" uid="uid://dfqkllmpini5c" path="res://character/jump.png" id="4_v822e"]
+[ext_resource type="Script" path="res://chagescene.gd" id="6_e2eef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwspi"]
 size = Vector2(1218, 86.5)
@@ -193,9 +194,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y5jw4")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -227,6 +228,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7q7dk"]
+size = Vector2(116, 612)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="scene" type="StaticBody2D" parent="."]
@@ -234,7 +238,7 @@ animations = [{
 [node name="Corridor" type="Sprite2D" parent="scene"]
 position = Vector2(1, -1)
 scale = Vector2(0.601562, 0.601563)
-texture = ExtResource("1_ujayv")
+texture = ExtResource("1_8o6ar")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="scene"]
 position = Vector2(0, 278.25)
@@ -255,3 +259,14 @@ shape = SubResource("CapsuleShape2D_v6dfs")
 position = Vector2(-319.428, 171.125)
 scale = Vector2(0.127901, 0.127901)
 sprite_frames = SubResource("SpriteFrames_nymnf")
+frame_progress = 0.885339
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("6_e2eef")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(566, -41)
+shape = SubResource("RectangleShape2D_7q7dk")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

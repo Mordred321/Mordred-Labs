@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://d31wtvf5lbpd1"]
+
+[ext_resource type="Texture2D" uid="uid://bd35gj4qjqarg" path="res://scene/door1_scene1.png" id="1_pxxy4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0rdx"]
+size = Vector2(1152, 93)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Door1Scene1" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0, 2)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_pxxy4")
+
+[node name="Camera2D" type="Camera2D" parent="StaticBody2D"]
+position = Vector2(4, -1.66893e-06)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 279.5)
+shape = SubResource("RectangleShape2D_n0rdx")
