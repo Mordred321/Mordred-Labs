@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://vu4i6ae4ive8"]
+
+[ext_resource type="Texture2D" uid="uid://bmx4sk7iar0xc" path="res://scene/door2.png" id="1_55lus"]
+[ext_resource type="PackedScene" uid="uid://cd4wh7vd3nct1" path="res://you.tscn" id="2_ujjf6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uenm7"]
+size = Vector2(1930.25, 171.056)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qj5l"]
+size = Vector2(117, 684)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7yum"]
+size = Vector2(94, 667)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="StaticBody2D"]
+
+[node name="Door2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-0.999971, 3)
+scale = Vector2(0.596296, 0.596296)
+texture = ExtResource("1_55lus")
+
+[node name="floor" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.499969, 289)
+scale = Vector2(0.596296, 0.596296)
+shape = SubResource("RectangleShape2D_uenm7")
+
+[node name="wall_right" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(633.5, 3)
+shape = SubResource("RectangleShape2D_3qj5l")
+
+[node name="wall_left" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-617, 8.5)
+shape = SubResource("RectangleShape2D_o7yum")
+
+[node name="you" parent="." instance=ExtResource("2_ujjf6")]
+position = Vector2(-94, 2)
