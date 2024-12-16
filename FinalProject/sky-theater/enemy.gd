@@ -1,18 +1,10 @@
 extends CharacterBody2D
 
-@export var speed = 150
-var player_chase = false
-var player = null
+@onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
+@export var target_to_chase: CharacterBody2D
 
-func _physics_process(delta):
-	if player_chase:
-		position -= (player.position - position) / speed
+const SPEED = 300.0
 
-func _on_detection_area_body_entered(body):
-	player = body
-	print(player)
-	player_chase = true
-
-func _on_detection_area_body_exited(body):
-	player = null
-	player_chase = false
+func _physics_process(delta:float) -> void:
+	navigation_agent.target_position = target_to_chase.global_position
+	move_and_slide
