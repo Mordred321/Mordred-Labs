@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ik6bu4x7pn8v"]
 
-[ext_resource type="Texture2D" uid="uid://bpw5s7f3avxes" path="res://scene/corridor2.png" id="1_8o6ar"]
+[ext_resource type="Texture2D" uid="uid://3otvo662neag" path="res://scene/corridor2.png" id="1_8o6ar"]
 [ext_resource type="PackedScene" uid="uid://cd4wh7vd3nct1" path="res://you.tscn" id="2_38lgk"]
 [ext_resource type="Script" path="res://chagescene.gd" id="6_e2eef"]
 

@@ -107,5 +107,6 @@ script = ExtResource("3_sp7jx")
 position = Vector2(432, -147)
 shape = SubResource("RectangleShape2D_m4vo4")
 
-[node name="Enemy" parent="." instance=ExtResource("4_n0vwo")]
+[node name="Enemy" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("4_n0vwo")]
 position = Vector2(239, 200)
+target_to_chase = NodePath("../you")
