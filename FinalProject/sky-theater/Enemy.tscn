@@ -37,5 +37,6 @@ shape = SubResource("CircleShape2D_yf8am")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.1725, 0.1725)
 sprite_frames = SubResource("SpriteFrames_ateeh")
+frame_progress = 0.407786
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

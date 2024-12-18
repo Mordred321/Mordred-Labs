@@ -1,9 +1,10 @@
-[gd_scene load_steps=35 format=3 uid="uid://cd4wh7vd3nct1"]
+[gd_scene load_steps=36 format=3 uid="uid://cd4wh7vd3nct1"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_0oknp"]
 [ext_resource type="Texture2D" uid="uid://d3gw4dxq81bw3" path="res://character/stand2.png" id="2_tbkj4"]
 [ext_resource type="Texture2D" uid="uid://dfqkllmpini5c" path="res://character/jump.png" id="3_opuuw"]
 [ext_resource type="Texture2D" uid="uid://br5l8jmijs71i" path="res://character/run_small.png" id="4_c6e3c"]
+[ext_resource type="AudioStream" uid="uid://boefjhwm41j6j" path="res://BGM/relaxing-piano-music-272714.mp3" id="5_ay30d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6dfs"]
 radius = 31.428
@@ -235,4 +236,8 @@ shape = SubResource("CapsuleShape2D_v6dfs")
 position = Vector2(-319.428, 171.125)
 scale = Vector2(0.127901, 0.127901)
 sprite_frames = SubResource("SpriteFrames_nymnf")
-animation = &"jump"
+frame_progress = 0.379088
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ay30d")
+autoplay = true

@@ -5,7 +5,7 @@ var entered = false
 
 func _on_body_exited(body: PhysicsBody2D):
 	entered = false
-
+	
 func _process(body):
 	entered = true
 	if Input. is_action_just_pressed("interact"):
