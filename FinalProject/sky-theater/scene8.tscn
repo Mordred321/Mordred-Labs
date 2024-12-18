@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://rggw6p0dq87v"]
+[gd_scene load_steps=10 format=3 uid="uid://rggw6p0dq87v"]
 
 [ext_resource type="Texture2D" uid="uid://duljsw8yu14u7" path="res://scene/Level3Scene1.png" id="1_sbqss"]
 [ext_resource type="PackedScene" uid="uid://cd4wh7vd3nct1" path="res://you.tscn" id="2_iuwk8"]
+[ext_resource type="AudioStream" uid="uid://boefjhwm41j6j" path="res://BGM/relaxing-piano-music-272714.mp3" id="2_wwe80"]
 [ext_resource type="Script" path="res://end.gd" id="3_xpmtp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bnnqv"]
@@ -62,6 +63,10 @@ shape = SubResource("RectangleShape2D_2av3i")
 position = Vector2(554, 110)
 shape = SubResource("RectangleShape2D_2av3i")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="StaticBody2D"]
+stream = ExtResource("2_wwe80")
+autoplay = true
+
 [node name="you" parent="." instance=ExtResource("2_iuwk8")]
 position = Vector2(-130, -12)
 
@@ -71,3 +76,6 @@ script = ExtResource("3_xpmtp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-357, -25)
 shape = SubResource("RectangleShape2D_or2ky")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
